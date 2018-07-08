@@ -23,6 +23,8 @@ public:
 private:
 	Sprite * healthBar;
 	Sprite * enemy1;
+	Sprite * enemy2;
+	Sprite * enemy3;
 	int towerLandsNum;
 	std::vector<Sprite*> towerLands;
 	std::vector<Vec2> towerLandsPositions;

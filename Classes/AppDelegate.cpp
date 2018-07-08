@@ -96,8 +96,9 @@ bool AppDelegate::applicationDidFinishLaunching() {
     register_all_packages();
 
 	// 加载游戏资源
+
 	// 添加enemy1帧动画
-	SpriteFrameCache::getInstance()->addSpriteFramesWithFile("enemy1.plist");
+	SpriteFrameCache::getInstance()->addSpriteFramesWithFile("enemy.plist");
 	char totalFrames_enemy1 = 11;
 	char frameName_enemy1[40];
 	Animation* enemy1Animation = Animation::create();
@@ -125,6 +126,64 @@ bool AppDelegate::applicationDidFinishLaunching() {
 	}
 	enemy1DeadAnimation->setDelayPerUnit(0.1);
 	AnimationCache::getInstance()->addAnimation(enemy1DeadAnimation, "enemy1DeadAnimation");
+
+	// 添加enemy2帧动画
+	char totalFrames_enemy2 = 8;
+	char frameName_enemy2[40];
+	Animation* enemy2Animation = Animation::create();
+	for (int i = 0; i < totalFrames_enemy2; i++) {
+		sprintf(frameName_enemy2, "enemy2_%d.png", i);
+		enemy2Animation->addSpriteFrame(SpriteFrameCache::getInstance()->getSpriteFrameByName(frameName_enemy2));
+	}
+	enemy2Animation->setDelayPerUnit(0.1);
+	AnimationCache::getInstance()->addAnimation(enemy2Animation, "enemy2Animation");
+
+	totalFrames_enemy2 = 8;
+	Animation* enemy2AttackAnimation = Animation::create();
+	for (int i = 0; i < totalFrames_enemy2; i++) {
+		sprintf(frameName_enemy2, "enemy2_attack_%d.png", i);
+		enemy2AttackAnimation->addSpriteFrame(SpriteFrameCache::getInstance()->getSpriteFrameByName(frameName_enemy2));
+	}
+	enemy2AttackAnimation->setDelayPerUnit(0.1);
+	AnimationCache::getInstance()->addAnimation(enemy2AttackAnimation, "enemy2AttackAnimation");
+
+	totalFrames_enemy2 = 10;
+	Animation* enemy2DeadAnimation = Animation::create();
+	for (int i = 0; i < totalFrames_enemy2; i++) {
+		sprintf(frameName_enemy2, "enemy2_dead_%d.png", i);
+		enemy2DeadAnimation->addSpriteFrame(SpriteFrameCache::getInstance()->getSpriteFrameByName(frameName_enemy2));
+	}
+	enemy2DeadAnimation->setDelayPerUnit(0.1);
+	AnimationCache::getInstance()->addAnimation(enemy2DeadAnimation, "enemy2DeadAnimation");
+
+	// 添加enemy3帧动画
+	char totalFrames_enemy3 = 9;
+	char frameName_enemy3[40];
+	Animation* enemy3Animation = Animation::create();
+	for (int i = 0; i < totalFrames_enemy3; i++) {
+		sprintf(frameName_enemy3, "enemy3_%d.png", i);
+		enemy3Animation->addSpriteFrame(SpriteFrameCache::getInstance()->getSpriteFrameByName(frameName_enemy3));
+	}
+	enemy3Animation->setDelayPerUnit(0.1);
+	AnimationCache::getInstance()->addAnimation(enemy3Animation, "enemy3Animation");
+
+	totalFrames_enemy3 = 9;
+	Animation* enemy3AttackAnimation = Animation::create();
+	for (int i = 0; i < totalFrames_enemy3; i++) {
+		sprintf(frameName_enemy3, "enemy3_attack_%d.png", i);
+		enemy3AttackAnimation->addSpriteFrame(SpriteFrameCache::getInstance()->getSpriteFrameByName(frameName_enemy3));
+	}
+	enemy3AttackAnimation->setDelayPerUnit(0.1);
+	AnimationCache::getInstance()->addAnimation(enemy3AttackAnimation, "enemy3AttackAnimation");
+
+	totalFrames_enemy3 = 7;
+	Animation* enemy3DeadAnimation = Animation::create();
+	for (int i = 0; i < totalFrames_enemy3; i++) {
+		sprintf(frameName_enemy3, "enemy3_dead_%d.png", i);
+		enemy3DeadAnimation->addSpriteFrame(SpriteFrameCache::getInstance()->getSpriteFrameByName(frameName_enemy3));
+	}
+	enemy3DeadAnimation->setDelayPerUnit(0.1);
+	AnimationCache::getInstance()->addAnimation(enemy3DeadAnimation, "enemy3DeadAnimation");
 
 
     // create a scene. it's an autorelease object
