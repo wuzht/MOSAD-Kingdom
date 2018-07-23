@@ -10,7 +10,7 @@ public:
     virtual bool init();
 
 	void startCallback(Ref* pSender);
-    
+	std::string int2str(int x);
 	// a selector callback
 	//void startMenuCallback(cocos2d::Ref* pSender);
     
